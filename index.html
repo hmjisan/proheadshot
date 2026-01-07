@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProHeadshot AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'retro-bg': '#FFFAF0', // Floral White / Cream
+              'retro-card': '#FFFFFF',
+              'retro-border': '#000000',
+              'retro-dark-bg': '#121212', // Dark Charcoal
+              'retro-dark-card': '#1E1E1E',
+              'retro-accent-1': '#FF9F1C', // Orange
+              'retro-accent-2': '#2EC4B6', // Teal
+              'retro-accent-3': '#FF5470', // Rose
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            boxShadow: {
+              'hard': '4px 4px 0px 0px rgba(0,0,0,1)',
+              'hard-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+              'hard-lg': '6px 6px 0px 0px rgba(0,0,0,1)',
+              'hard-white': '4px 4px 0px 0px rgba(255,255,255,1)',
+              'hard-white-sm': '2px 2px 0px 0px rgba(255,255,255,1)',
+              'hard-white-lg': '6px 6px 0px 0px rgba(255,255,255,1)',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFAF0;
+        background-image: radial-gradient(#E5E5E5 1px, transparent 1px);
+        background-size: 20px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      .dark body {
+        background-color: #121212;
+        background-image: radial-gradient(#333 1px, transparent 1px);
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      /* Custom Scrollbar */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-left: 2px solid black;
+      }
+      .dark .custom-scrollbar::-webkit-scrollbar-track {
+        background: #333;
+        border-left: 2px solid white;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #000;
+        border: 2px solid #000; 
+      }
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #fff;
+        border: 2px solid #fff; 
+      }
+
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #333;
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body class="text-black dark:text-white antialiased">
+    <div id="root"></div>
+  </body>
+</html>
